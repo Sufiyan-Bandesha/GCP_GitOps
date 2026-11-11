@@ -34,7 +34,7 @@ terraform {
   # State path inside the bucket: cloudkitchen/default.tfstate
   # ---------------------------------------------------------------------------
   backend "gcs" {
-    bucket = "cloudkitchen-tfstate-585510587062"
+    bucket = "cloudkitchen-tfstate"
     prefix = "cloudkitchen"
   }
 }
