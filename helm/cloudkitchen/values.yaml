@@ -10,14 +10,18 @@
 # Namespace every resource is created in.
 namespace: cloudkitchen
 # Container registry that holds the service images (GCP Artifact Registry for GKE).
-imageRegistry: us-central1-docker.pkg.dev/project-d31a3358-346c-40e8-bda/cloudkitchen-registry
+imageRegistry: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry
 # -----------------------------------------------------------------------------
 # Backend microservices (all listen on :8080, expose /healthz and /readyz)
 # -----------------------------------------------------------------------------
 authService:
   deploymentname: auth-service-deployment
   servicename: auth-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/auth-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/auth-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: auth # PostgreSQL schema this service owns
@@ -27,7 +31,11 @@ authService:
 userService:
   deploymentname: user-service-deployment
   servicename: user-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/user-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/user-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: users
@@ -37,7 +45,11 @@ userService:
 restaurantService:
   deploymentname: restaurant-service-deployment
   servicename: restaurant-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/restaurant-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/restaurant-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: restaurants
@@ -47,7 +59,11 @@ restaurantService:
 menuService:
   deploymentname: menu-service-deployment
   servicename: menu-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/menu-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/menu-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: menu
@@ -57,7 +73,11 @@ menuService:
 orderService:
   deploymentname: order-service-deployment
   servicename: order-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/order-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/order-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: orders
@@ -67,7 +87,11 @@ orderService:
 paymentService:
   deploymentname: payment-service-deployment
   servicename: payment-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/payment-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/payment-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: payments
@@ -77,7 +101,11 @@ paymentService:
 deliveryService:
   deploymentname: delivery-service-deployment
   servicename: delivery-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/delivery-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/delivery-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: delivery
@@ -87,7 +115,11 @@ deliveryService:
 notificationService:
   deploymentname: notification-service-deployment
   servicename: notification-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/notification-service:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/notification-service:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   schema: notifications
@@ -100,7 +132,11 @@ notificationService:
 frontend:
   deploymentname: frontend-deployment
   servicename: frontend-service
+<<<<<<< HEAD
   image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/frontend:0225e80
+=======
+  image: us-central1-docker.pkg.dev/vprofile-project-508214/cloudkitchen-registry/frontend:2fec561
+>>>>>>> 2090cde (Use my GCP project registry)
   replicas: 1
   port: 8080
   hpa: frontend-autoscaler
