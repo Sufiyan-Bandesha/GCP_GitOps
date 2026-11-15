@@ -154,7 +154,7 @@ ingress:
   #     -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
   lbIP: 34.44.234.194
   entryPoint: websecure
-  tlsSecretName: cloudkitchen-tls
+  tlsSecretName: sufi-devops-tls
   clusterIssuer: letsencrypt-prod
 # -----------------------------------------------------------------------------
 # Observability IngressRoutes + ServiceMonitor are NOT in this chart.
