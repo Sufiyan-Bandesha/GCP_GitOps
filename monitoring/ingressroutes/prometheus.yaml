@@ -15,9 +15,13 @@ metadata:
 spec:
   entryPoints:
     - web
+    - websecure
   routes:
     - match: Host(`sufi-devops.xyz`) && PathPrefix(`/prometheus`)
       kind: Rule
+      priority: 200
       services:
         - name: kube-prometheus-prometheus
           port: 9090
+  tls:
+    secretName: monitoring-tls
