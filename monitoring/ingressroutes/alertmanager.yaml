@@ -15,9 +15,13 @@ metadata:
 spec:
   entryPoints:
     - web
+    - websecure
   routes:
     - match: Host(`sufi-devops.xyz`) && PathPrefix(`/alertmanager`)
       kind: Rule
+      priority: 200
       services:
         - name: kube-prometheus-alertmanager
           port: 9093
+  tls:
+    secretName: monitoring-tls
