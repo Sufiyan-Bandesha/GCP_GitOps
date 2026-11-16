@@ -69,7 +69,7 @@ spec:
           grafana.ini:
             server:
               domain: vijaygiduthuri.in
-              root_url: "http://vijaygiduthuri.in/grafana/"
+              root_url: "http://sufi-devops.xyz/grafana/"
               serve_from_sub_path: true
           # Auto-add Loki as a datasource so log panels work out of the box.
           # (The default Prometheus datasource is added by the chart already.)
@@ -104,7 +104,7 @@ spec:
           prometheusSpec:
             retention: 15d
             routePrefix: /prometheus
-            externalUrl: http://vijaygiduthuri.in/prometheus
+            externalUrl: http://sufi-devops.xyz/prometheus
             # Discover ServiceMonitors / PodMonitors across all namespaces
             # (so anything we drop in cloudkitchen ns gets scraped).
             serviceMonitorSelectorNilUsesHelmValues: false
@@ -131,7 +131,7 @@ spec:
           enabled: true
           alertmanagerSpec:
             routePrefix: /alertmanager
-            externalUrl: http://vijaygiduthuri.in/alertmanager
+            externalUrl: http://sufi-devops.xyz/alertmanager
             resources:
               requests:
                 cpu: 25m
