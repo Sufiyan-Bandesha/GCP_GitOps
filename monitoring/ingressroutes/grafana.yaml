@@ -15,9 +15,13 @@ metadata:
 spec:
   entryPoints:
     - web
+    - websecure
   routes:
     - match: Host(`sufi-devops.xyz`) && PathPrefix(`/grafana`)
       kind: Rule
+      priority: 200
       services:
         - name: monitoring-grafana
           port: 80
+  tls:
+    secretName: monitoring-tls
