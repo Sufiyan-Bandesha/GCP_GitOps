@@ -1,3 +1,7 @@
+> **Credit:** This is a learning copy of **CloudKitchen** by **Vijay Giduthuri**.
+> Original project: https://github.com/vijaygiduthuri/cloudkitchen-app
+> Used for personal learning under the original author's license.
+
 # CloudKitchen
 
 [![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)](.github/workflows)
